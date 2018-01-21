@@ -1,0 +1,23 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Data";
+
+message QuestionItem{
+	required string id = 1;  //题目id
+	required string desc = 2;//题目描述
+	required int32 category = 3;// 0-单选 1-多选 2-简答
+	required int32 type = 4;// 1-桡骨 2-肱骨
+	required int32 step = 5;// 步骤    1-接诊 2-诊断 3-治疗 4-功能锻炼 5-用药
+	required OptionItem qA = 6;// 选项1
+	optional OptionItem qB = 7;// 选项2
+	optional OptionItem qC = 8;// 选项3
+	optional OptionItem qD = 9;// 选项4
+	required string answer = 10;//答案
+	
+}
+
+message OptionItem{
+	required string id = 1;  //选项id
+	required string desc = 2;//选项描述
+	required int32 isPic = 3;//0-文字 1-图片
+}

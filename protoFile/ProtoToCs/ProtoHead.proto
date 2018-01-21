@@ -1,0 +1,16 @@
+package protocol;
+
+option java_package = "com.vr.protocol";
+
+enum ENetworkMessage{
+    KEEP_ALIVE_SYNC=0;   
+    LOGIN_REQ=1;
+    LOGIN_RSP=2;
+	GET_USERINFO_REQ=3;
+	GET_USERINFO_RSP=4;	
+	LOGOUT_REQ=5;
+	LOGOUT_RSP=6;
+	OFFLINE_SYNC=7;
+	GET_QUESTION_INFO_REQ=8;
+	GET_QUESTION_INFO_RSP=9;
+}

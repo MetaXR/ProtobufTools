@@ -1,0 +1,12 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Data";
+
+message UserItem{
+	required string userId = 1;
+	required string userName = 2;
+	required string roleId = 3; //0-老师 1-学生
+	optional int32  headIndex = 4;
+}
+
+

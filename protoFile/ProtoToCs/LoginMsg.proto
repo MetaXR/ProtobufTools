@@ -1,0 +1,15 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Msg";
+
+message LoginReq{
+	required string userId= 1;
+	required string sessionId=2;
+}
+message LoginRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+}

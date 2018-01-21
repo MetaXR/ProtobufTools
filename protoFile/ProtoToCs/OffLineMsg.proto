@@ -1,0 +1,13 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Msg";
+
+message OffLineSync{	
+	enum CauseCode{
+		CHANGE_PASSWORD=0;
+		ANOTHER_LOGIN=1;
+		KEEP_ALIVE_FALSE=2;
+	}
+	required CauseCode causeCode =1;
+	
+}

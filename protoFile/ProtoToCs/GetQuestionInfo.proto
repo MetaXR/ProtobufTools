@@ -1,0 +1,18 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Msg";
+import "QuestionData.proto";
+
+message GetQuestionInfoReq{
+
+}
+
+message GetQuestionInfoRsp{
+	enum ResultCode{
+		SUCCESS = 0;//成功
+		FAIL = 1;//失败
+	}
+	
+	required ResultCode resultCode = 1;
+	repeated QuestionItem questionInfo = 2;
+}

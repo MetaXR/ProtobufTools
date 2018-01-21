@@ -1,0 +1,21 @@
+package protocol;
+
+option java_package = "com.vr.protocol.Msg";
+import "UserData.proto";
+import "GroupData.proto";
+
+message GetPersonalInfoReq{
+	optional bool userInfo = 1 [default = false];	
+	optional bool groupInfo = 2 [default =false];
+}
+
+message GetPersonalInfoRsp{
+	enum ResultCode{
+		SUCCESS = 0;//成功
+		FAIL = 1;//失败
+	}
+	
+	required ResultCode resultCode = 1;	
+	optional UserItem userInfo = 2;	
+	repeated  GroupItem groups = 3;
+}
